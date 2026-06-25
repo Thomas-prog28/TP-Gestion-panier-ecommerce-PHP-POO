@@ -1,16 +1,20 @@
 <?php
-abstract class Produit 
-{
-    protected string $nom;
-    protected float $prixHT;
+require_once __DIR__ . '/../src/Repository/ProduitRepository.php';
+require_once __DIR__ . '/../src/Factory/ProduitFactory.php';
 
-    public function __cosntruct(string $nom, float $prixHT)
-    {
-        $this->nom = $nom;
-        $this->prixHT = $prixHT;
-    }
+$repository = new ProduitRepository();
+$lignes = $repository->findAll();
 
-    public function getNom() {
-        return $this->nom;
-    }
+$total = 0;
+
+foreach($lignes as $ligne) {
+    $produit = ProduitFactory::creerProduit($ligne);
+    $ttc = $produit->calculerPrixTTC();
+    $port = $produit->getFraisDePort();
+
+    echo $produit->getNom() . " - TTC : $ttc € - Port : $port € <br>";
+
+    $total += $ttc + $port;
 }
+echo "TOTAL : $total €";
+?>
