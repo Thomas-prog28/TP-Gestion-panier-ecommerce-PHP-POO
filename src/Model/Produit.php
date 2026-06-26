@@ -21,5 +21,7 @@ abstract class Produit
     {
         return 0;
     }
+
+    abstract public function getType(): string;   //on ajoute ici pour éviter que PHP ne comprenne pas dans index.php alors qu'on a surchargé getType() dans chaque enfant livre, ebook et vinyl
 }
 ?>

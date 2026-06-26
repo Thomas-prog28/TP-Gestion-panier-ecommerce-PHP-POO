@@ -12,5 +12,10 @@ class Vinyle extends Produit
     {
         return 4.0;
     }
+
+    public function getType(): string
+    {
+        return 'vinyle';
+    }
 }
 ?>

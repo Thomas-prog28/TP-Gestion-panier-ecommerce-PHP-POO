@@ -12,7 +12,7 @@ foreach($lignes as $ligne) {
     $ttc = $produit->calculerPrixTTC();
     $port = $produit->getFraisDePort();
 
-    echo $produit->getNom() . " - TTC : $ttc € - Port : $port € <br>";
+    echo $produit->getNom() . " - TTC : $ttc € - Port : $port € - Type : " . $produit->getType() . "<br>";
 
     $total += $ttc + $port;
 }

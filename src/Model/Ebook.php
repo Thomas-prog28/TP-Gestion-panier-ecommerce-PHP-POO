@@ -7,4 +7,9 @@ class Ebook extends Produit
     {
         return $this->prixHT * 1.20;
     }
+
+    public function getType(): string
+    {
+        return 'ebook';
+    }
 }

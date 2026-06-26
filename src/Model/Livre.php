@@ -12,5 +12,10 @@ class Livre extends Produit
     {
         return 2.0;
     }
+
+    public function getType(): string
+    {
+        return 'livre';
+    }
 }
 ?>
