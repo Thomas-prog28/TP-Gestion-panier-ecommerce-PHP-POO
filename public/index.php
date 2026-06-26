@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../src/Repository/ProduitRepository.php';
 require_once __DIR__ . '/../src/Factory/ProduitFactory.php';
+include_once __DIR__ . '/formulaire.php';
 
 $repository = new ProduitRepository();
 $lignes = $repository->findAll();
