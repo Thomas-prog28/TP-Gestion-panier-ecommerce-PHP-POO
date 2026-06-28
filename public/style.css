@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lora:wght@400;500&family=Courier+Prime&display=swap');
+
+/* =====================
+   BASE
+   ===================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F5ECD7;
+    font-family: 'Lora', serif;
+    color: #2C1A0E;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =====================
+   HEADER
+   ===================== */
+
+.header {
+    background: #2C1A0E;
+    color: #F5ECD7;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    border-bottom: 4px solid #C9A84C;
+}
+
+.header__titre {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.header__sous-titre {
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    color: #C9A84C;
+    margin-top: 4px;
+    letter-spacing: 0.15em;
+}
+
+/* =====================
+   MAIN
+   ===================== */
+
+.main {
+    padding: 1.5rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* =====================
+   SECTION
+   ===================== */
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section__titre {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #8B1A1A;
+    border-bottom: 2px solid #C9A84C;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+/* =====================
+   STATS
+   ===================== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.stats__carte {
+    background: #FDF6E3;
+    border: 1.5px solid #C9A84C;
+    padding: 10px 14px;
+    text-align: center;
+}
+
+.stats__nombre {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #8B1A1A;
+    display: block;
+}
+
+.stats__label {
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    color: #8B6A3E;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* =====================
+   TABLEAU
+   ===================== */
+
+.tableau-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tableau {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courier Prime', monospace;
+    font-size: 13px;
+    background: #FDF6E3;
+    border: 1.5px solid #C9A84C;
+    min-width: 420px;
+}
+
+.tableau__head {
+    background: #2C1A0E;
+}
+
+.tableau__head th {
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 400;
+    color: #C9A84C;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 11px;
+}
+
+.tableau__ligne td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #E8D9B5;
+    color: #2C1A0E;
+}
+
+.tableau__ligne:last-child td {
+    border-bottom: none;
+}
+
+.tableau__ligne:hover td {
+    background: #F5ECD7;
+}
+
+/* =====================
+   BADGE
+   ===================== */
+
+.badge {
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.badge--livre {
+    background: #C9A84C22;
+    color: #7a5c00;
+    border: 1px solid #C9A84C;
+}
+
+.badge--ebook {
+    background: #8B1A1A18;
+    color: #8B1A1A;
+    border: 1px solid #8B1A1A88;
+}
+
+.badge--vinyle {
+    background: #2C1A0E15;
+    color: #2C1A0E;
+    border: 1px solid #2C1A0E55;
+}
+
+/* =====================
+   TOTAL
+   ===================== */
+
+.total {
+    text-align: right;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #8B1A1A;
+    padding: 1rem 0 0;
+}
+
+/* =====================
+   DIVIDER
+   ===================== */
+
+.divider {
+    border: none;
+    border-top: 2px dashed #C9A84C88;
+    margin: 2rem 0;
+}
+
+/* =====================
+   FORMULAIRE
+   ===================== */
+
+.formulaire {
+    background: #FDF6E3;
+    border: 1.5px solid #C9A84C;
+    padding: 1.2rem;
+}
+
+.formulaire__groupe {
+    margin-bottom: 1rem;
+}
+
+.formulaire__label {
+    font-family: 'Courier Prime', monospace;
+    font-size: 12px;
+    color: #8B6A3E;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulaire__input {
+    width: 100%;
+    background: #F5ECD7;
+    border: 1px solid #C9A84C;
+    padding: 8px 12px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 14px;
+    color: #2C1A0E;
+    outline: none;
+    border-radius: 0;
+    appearance: none;
+}
+
+.formulaire__input:focus {
+    border-color: #8B1A1A;
+    box-shadow: 0 0 0 2px #8B1A1A22;
+}
+
+.formulaire__radio-groupe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.formulaire__radio-label {
+    font-family: 'Courier Prime', monospace;
+    font-size: 13px;
+    color: #2C1A0E;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.formulaire__btn {
+    width: 100%;
+    background: #8B1A1A;
+    color: #FDF6E3;
+    border: none;
+    padding: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    border-radius: 0;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.formulaire__btn:hover {
+    background: #6d1313;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+
+.footer {
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+    font-size: 11px;
+    color: #8B6A3E;
+    padding: 1.2rem 1rem;
+    border-top: 2px solid #C9A84C;
+    margin-top: 2rem;
+    letter-spacing: 0.1em;
+}
+
+/* =====================
+   MEDIA QUERIES — tablette
+   ===================== */
+
+@media (min-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+
+    .header__titre {
+        font-size: 26px;
+    }
+
+    .header__sous-titre {
+        font-size: 12px;
+    }
+
+    .main {
+        padding: 2rem 1.5rem;
+    }
+
+    .stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stats__nombre {
+        font-size: 26px;
+    }
+
+    .tableau {
+        font-size: 14px;
+    }
+
+    .formulaire {
+        padding: 1.5rem;
+    }
+
+    .formulaire__grille {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+/* =====================
+   MEDIA QUERIES — desktop
+   ===================== */
+
+@media (min-width: 900px) {
+    .header__titre {
+        font-size: 30px;
+    }
+
+    .main {
+        padding: 2.5rem 2rem;
+    }
+
+    .section__titre {
+        font-size: 20px;
+    }
+
+    .stats__nombre {
+        font-size: 30px;
+    }
+
+    .formulaire__btn {
+        width: auto;
+        padding: 12px 32px;
+    }
+}
